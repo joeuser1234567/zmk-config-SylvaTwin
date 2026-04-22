@@ -58,6 +58,15 @@
             key-positions = <40 26>;
         };
     };
+        
+    behaviors {
+        encoder_msc: sensor_rotate_msc {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+            tap-ms = <20>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -70,7 +79,7 @@
 &none  &kp LEFT_ALT      &none  &none  &kp LEFT_CONTROL  &kp TAB  &mt LEFT_COMMAND SPACE  &lt 1 ENTER     &kp BACKSPACE  &none  &none      &kp COLON  &lt 1 SLASH                   &none
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&encoder_msc SCRL_UP SCRL_DOWN>;
         };
 
         number_and_arrows_layer {
