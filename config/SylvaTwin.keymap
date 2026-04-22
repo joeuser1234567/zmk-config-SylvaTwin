@@ -3,6 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
+
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 200
 
 #include <behaviors.dtsi>
@@ -59,12 +60,13 @@
             key-positions = <40 26>;
         };
     };
-        
+
     behaviors {
         encoder_msc: sensor_rotate_msc {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
+
             tap-ms = <20>;
         };
     };
@@ -80,7 +82,7 @@
 &none  &kp LEFT_ALT      &none  &none  &kp LEFT_CONTROL  &kp TAB  &mt LEFT_COMMAND SPACE  &lt 1 ENTER     &kp BACKSPACE  &none  &none      &kp COLON  &lt 1 SLASH                   &none
             >;
 
-            sensor-bindings = <&encoder_msc SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&encoder_msc SCRL_DOWN SCRL_UP>;
         };
 
         number_and_arrows_layer {
@@ -110,6 +112,17 @@
 &trans          &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans        &trans        &trans        &trans        &trans        &trans
 &trans          &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans        &trans        &trans        &trans        &trans        &trans
             >;
+        };
+
+        SCRL_L_R_Layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <&encoder_msc SCRL_LEFT SCRL_RIGHT>;
         };
     };
 };
