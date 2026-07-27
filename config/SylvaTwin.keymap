@@ -11,6 +11,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define WIN 0
+#define MAC 1
+#define NUM 2
+#define MARK 3
+#define BT 4
+#define SCRL 5
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -59,6 +66,16 @@
             bindings = <&kp LC(X)>;
             key-positions = <40 26>;
         };
+
+        win_default {
+            bindings = <&to WIN>;
+            key-positions = <2 10>;
+        };
+
+        mac_default {
+            bindings = <&to MAC>;
+            key-positions = <43 10>;
+        };
     };
 
     behaviors {
@@ -76,10 +93,21 @@
 
         default_layer {
             bindings = <
-&none  &mt ESCAPE Q      &kp W  &kp E  &kp R             &lt 4 T                                          &kp Y          &kp U  &kp I      &kp O      &kp P                         &kp EQUAL
+&none  &mt ESCAPE Q      &kp W  &kp E  &kp R             &lt SCRL T                                       &kp Y          &kp U  &kp I      &kp O      &kp P                         &kp EQUAL
 &none  &kp A             &kp S  &kp D  &kp F             &kp G                                            &kp H          &kp J  &kp K      &kp L      &kp MINUS                     &none
-&none  &mt LEFT_SHIFT Z  &kp X  &kp C  &kp V             &lt 3 B  &lt 2 LANGUAGE_1        &kp LANGUAGE_2  &kp N          &kp M  &kp COMMA  &kp DOT    &mt RIGHT_SHIFT SINGLE_QUOTE  &none
-&none  &kp LEFT_ALT      &none  &none  &kp LEFT_CONTROL  &kp TAB  &mt LEFT_COMMAND SPACE  &lt 1 ENTER     &kp BACKSPACE  &none  &none      &kp COLON  &lt 1 SLASH                   &none
+&none  &mt LEFT_SHIFT Z  &kp X  &kp C  &kp V             &lt BT B  &lt MARK LANGUAGE_1     &kp LANGUAGE_2  &kp N          &kp M  &kp COMMA  &kp DOT    &mt RIGHT_SHIFT SINGLE_QUOTE  &none
+&none  &kp LEFT_ALT      &none  &none  &kp LEFT_CONTROL  &kp TAB  &mt LEFT_COMMAND SPACE  &lt NUM ENTER   &kp BACKSPACE  &none  &none      &kp COLON  &lt NUM SLASH                 &none
+            >;
+
+            sensor-bindings = <&encoder_msc SCRL_DOWN SCRL_UP>;
+        };
+
+        mac_default_layer {
+            bindings = <
+&none  &mt ESCAPE Q      &kp W  &kp E  &kp R             &lt SCRL T                                       &kp Y          &kp U  &kp I      &kp O      &kp P                         &kp EQUAL
+&none  &kp A             &kp S  &kp D  &kp F             &kp G                                            &kp H          &kp J  &kp K      &kp L      &kp MINUS                     &none
+&none  &mt LEFT_SHIFT Z  &kp X  &kp C  &kp V             &lt BT B  &lt MARK LANGUAGE_1     &kp LANGUAGE_2  &kp N          &kp M  &kp COMMA  &kp DOT    &mt RIGHT_SHIFT SINGLE_QUOTE  &none
+&none  &kp LEFT_ALT      &none  &none  &kp LEFT_CONTROL  &kp TAB  &mt LEFT_COMMAND SPACE  &lt NUM ENTER   &kp BACKSPACE  &none  &none      &kp COLON  &lt NUM SLASH                 &none
             >;
 
             sensor-bindings = <&encoder_msc SCRL_DOWN SCRL_UP>;
