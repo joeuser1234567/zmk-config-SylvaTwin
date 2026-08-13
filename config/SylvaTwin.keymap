@@ -115,10 +115,10 @@
 
         number_and_arrows_layer {
             bindings = <
-&kp N7        &kp NUMBER_8  &kp N9        &kp PLUS      &kp MINUS  &trans                  &trans          &kp F2          &kp F3           &kp F12  &trans  &trans
-&kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp SLASH  &trans                  &trans          &kp UP_ARROW    &trans           &trans   &trans  &trans
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &trans     &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans   &trans  &trans
-&trans        &kp NUMBER_0  &kp PERIOD    &trans        &trans     &trans  &trans  &trans  &trans          &kp DELETE      &trans           &trans   &trans  &trans
+&kp N7        &kp NUMBER_8  &kp N9        &kp PLUS      &kp MINUS  &trans                  &trans  &kp F2          &kp F3          &kp F12          &trans  &trans
+&kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp SLASH  &trans                  &trans  &trans          &kp UP_ARROW    &trans           &trans  &trans
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &trans     &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans        &kp NUMBER_0  &kp PERIOD    &trans        &trans     &trans  &trans  &trans  &trans  &kp DELETE      &trans          &trans           &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
