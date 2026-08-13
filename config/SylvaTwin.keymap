@@ -29,7 +29,7 @@
 
         mac_default {
             bindings = <&to MAC>;
-            key-positions = <43 11 34>;
+            key-positions = <11 34>;
         };
     };
 
