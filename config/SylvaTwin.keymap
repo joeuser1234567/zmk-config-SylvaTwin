@@ -22,59 +22,14 @@
     combos {
         compatible = "zmk,combos";
 
-        prtsc {
-            bindings = <&kp PRINTSCREEN>;
-            key-positions = <10 11>;
-        };
-
-        RightClick {
-            bindings = <&mkp RCLK>;
-            key-positions = <45 6>;
-        };
-
-        MiddleClick {
-            bindings = <&mkp MCLK>;
-            key-positions = <29 43>;
-        };
-
-        LeftClick {
-            bindings = <&mkp LCLK>;
-            key-positions = <31 45>;
-        };
-
-        MiddleClick2 {
-            bindings = <&mkp MCLK>;
-            key-positions = <32 46>;
-        };
-
-        zen-han {
-            bindings = <&kp GRAVE>;
-            key-positions = <0 1>;
-        };
-
-        paste {
-            bindings = <&kp LC(V)>;
-            key-positions = <42 28>;
-        };
-
-        copy {
-            bindings = <&kp LC(C)>;
-            key-positions = <41 27>;
-        };
-
-        cut {
-            bindings = <&kp LC(X)>;
-            key-positions = <40 26>;
-        };
-
         win_default {
             bindings = <&to WIN>;
-            key-positions = <2 10>;
+            key-positions = <11 1>;
         };
 
         mac_default {
             bindings = <&to MAC>;
-            key-positions = <43 10>;
+            key-positions = <43 11 34>;
         };
     };
 
