@@ -38,7 +38,7 @@
         };
 
         desktop_right {
-            bindings = <&kp RC(RG(RIGHT_ARROW))>;
+            bindings = <&kp LC(LG(RIGHT_ARROW))>;
             key-positions = <10 11>;
         };
     };
